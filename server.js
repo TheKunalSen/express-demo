@@ -4,7 +4,7 @@ const express = require('express');
 // Creating an instance of Express
 const app = express();
 const port = 3000; // Port number
-
+const hostname = '0.0.0.0'
 // Define a route that returns a JSON response
 app.get('/api/data', (req, res) => {
     // Sample JSON data
@@ -19,6 +19,6 @@ app.get('/api/data', (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
+app.listen(port,hostname, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
